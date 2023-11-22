@@ -1,3 +1,9 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -12,6 +18,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+#root {
+  padding: 0;
+}
+
 
 a {
   font-weight: 500;
@@ -66,3 +77,198 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+
+
+
+/* Header css */
+#whole-header {
+  padding: 10px 30px;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo-pic {
+  width: 100px;
+}
+
+.flex-for-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-for-header a {
+  cursor: pointer;
+  padding: 3px 10px 3px;
+  margin: 10px;
+  font-size: 1.3em;
+  color: #fff;
+  transition: 0.3s ease;
+  border-radius: 3px;
+}
+.flex-for-header a:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+
+
+
+
+
+/* Home Page */
+#hero {
+  position: relative;
+}
+
+#idk-RENAMEME {
+  position: absolute;
+  top: 105px;
+  left: 150px;
+  width: 500px;
+  background-color: #0000002f;
+  padding: 15px;
+  border-radius: 7px;
+  text-align: left;
+}
+
+#clothing {
+  padding: 0 0 150px;
+  border-bottom: 2px solid #ff0000;
+}
+
+#clothing h2 {
+  font-size: 4em;
+}
+
+#clothing-small-display {
+  display: flex;
+  overflow-x: hidden;
+}
+
+.small-display img {
+  border: #000 solid 1px;
+}
+
+
+
+
+
+/* Jewelry page */
+#jewelry-page {
+  padding: 10px 5%;
+}
+
+.product {
+  padding: 30px 5% 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.card {
+  background-color: #5e5353;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.card img {
+  width: 350px;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Login form */
+body {
+  background-color: hsl(0, 0%, 56%);
+}
+
+/* allows form to change its width */
+#root {
+  width: 100vw;
+}
+
+
+/* flex input and the img */
+#UserPW {
+  display: flex;
+  flex-direction: column;
+}
+
+/* controls the whole Login Card */
+.login-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 10px;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 250px 10px rgba(0, 0, 0, 0.5);
+  background-color: #AEAEAE;
+}
+.login-form img {
+  /* you can change the color inside the logo */
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+/* "Username:" and "Password:" */
+.login-form label {
+  text-align: left;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* input fields */
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Login btn */
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: hsl(211, 100%, 50%);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.login-form button:hover {
+  background-color: hsl(211, 100%, 43%);
+}
+
+#SU-text {
+  color: #696969;
+}
+#sign-up {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+/* End of login form */
