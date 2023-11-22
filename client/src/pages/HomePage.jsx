@@ -4,7 +4,7 @@ import React from 'react';
 function HomePage() {
   return (
     <div id='home-page'>
-      <section id="hero">
+      <section id="home-hero">
         <img src="https://via.placeholder.com/1920x600" alt="placeholder" />
         <div id="idk-RENAMEME">
           <h1>Inspirational text here</h1>
@@ -17,19 +17,16 @@ function HomePage() {
           {/* I want to link all of these to their seperate page */}
           <div className='small-display'>
             <img src="https://via.placeholder.com/476x100" alt="placeholder" />
-            <h3>Hats</h3>
+            <h3>Hoodies</h3>
           </div>
-          {/* I want to link all of these to their seperate page */}
           <div className='small-display'>
             <img src="https://via.placeholder.com/476x100" alt="placeholder" />
             <h3>Shirts</h3>
           </div>
-          {/* I want to link all of these to their seperate page */}
           <div className='small-display'>
             <img src="https://via.placeholder.com/476x100" alt="placeholder" />
-            <h3>Jackets</h3>
+            <h3>Sweats</h3>
           </div>
-          {/* I want to link all of these to their seperate page */}
           <div className='small-display'>
             <img src="https://via.placeholder.com/476x100" alt="placeholder" />
             <h3>Jewlery</h3>
