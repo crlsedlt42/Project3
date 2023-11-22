@@ -119,79 +119,6 @@ button:focus-visible {
 
 
 
-
-/* Home Page */
-#hero {
-  position: relative;
-}
-
-#idk-RENAMEME {
-  position: absolute;
-  top: 105px;
-  left: 150px;
-  width: 500px;
-  background-color: #0000002f;
-  padding: 15px;
-  border-radius: 7px;
-  text-align: left;
-}
-
-#clothing {
-  padding: 0 0 150px;
-  border-bottom: 2px solid #ff0000;
-}
-
-#clothing h2 {
-  font-size: 4em;
-}
-
-#clothing-small-display {
-  display: flex;
-  overflow-x: hidden;
-}
-
-.small-display img {
-  border: #000 solid 1px;
-}
-
-
-
-
-
-/* Jewelry page */
-#jewelry-page {
-  padding: 10px 5%;
-}
-
-.product {
-  padding: 30px 5% 10px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 10px;
-}
-
-.card {
-  background-color: #5e5353;
-  padding: 5px;
-  border-radius: 10px;
-}
-
-.card img {
-  width: 350px;
-  background-size: cover;
-  border-radius: 10px;
-}
-
-
-
-
-
-
-
-
-
-
-
 /* Login form */
 body {
   background-color: hsl(0, 0%, 56%);
@@ -272,3 +199,125 @@ body {
   text-decoration: underline;
 }
 /* End of login form */
+
+
+
+
+
+
+/* Home Page */
+#home-hero {
+  position: relative;
+}
+
+#idk-RENAMEME {
+  position: absolute;
+  top: 105px;
+  left: 150px;
+  width: 500px;
+  background-color: #0000002f;
+  padding: 15px;
+  border-radius: 7px;
+  text-align: left;
+}
+
+#clothing {
+  padding: 0 0 150px;
+  border-bottom: 2px solid #ff0000;
+}
+
+#clothing h2 {
+  font-size: 4em;
+}
+
+#clothing-small-display {
+  display: flex;
+  overflow: hidden;
+}
+
+.small-display {
+  position: relative;
+  cursor: pointer;
+  transition: 0.6s ease-out;
+}
+
+.small-display:hover {
+  transform: scale(1.1);
+  z-index: 1;
+  transition: 0.4s ease-in-out;
+}
+
+.small-display h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000000cc;
+  padding: 5px 10px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px 2px #000000be;
+}
+
+.small-display img {
+  border: #000 solid 1px;
+}
+
+
+
+
+
+/* global styling for prodiuct display */
+
+.product-page {
+  padding: 10px 5%;
+}
+
+.product {
+  padding: 30px 5% 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.card {
+  background-color: #5e5353;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card img {
+  width: 350px;
+  background-size: cover;
+  border-radius: 10px;
+  background-color: #bebebe;
+}
+
+
+
+
+
+/* Hoodie_WalkIn.jsx */
+/* global styling for specific clothing pages */
+.hero {
+  width: 100vw;
+  background-color: #000;
+}
+.spec-item-page .hero img {
+  width: 550px;
+  padding: 0 10px;
+}
+
+.spec-item-display {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.spec-item-info {
+  margin: 50px 30px 50px 10px;
+  text-align: left;
+}
+
+.spec-item-info p {
+  font-size: 1.25em;
+}

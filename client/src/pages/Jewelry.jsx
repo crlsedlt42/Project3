@@ -22,7 +22,7 @@ import silverSolidR from '../assets/jewelry/ring-silver-solid.png';
 
 function Jewelry() {
   return (
-    <div id='jewelry-page'>
+    <div className='product-page'>
       <h1>Jewelry</h1>
       <div className="product">
         <div className="card">
