@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 // Added CSS and imported the logo png
-import './LogIn.css';
 import fabic from '../assets/FabicCodeLogo500px.png';
 
 function LoginForm() {
