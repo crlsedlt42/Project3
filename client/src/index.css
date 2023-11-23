@@ -21,17 +21,18 @@
 
 #root {
   padding: 0;
+  width: 100%;
 }
 
 
-a {
+/* a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
 a:hover {
   color: #535bf2;
-}
+} */
 
 body {
   margin: 0;
@@ -106,6 +107,8 @@ button:focus-visible {
   padding: 3px 10px 3px;
   margin: 10px;
   font-size: 1.3em;
+  font-weight: 600;
+  text-decoration: none;
   color: #fff;
   transition: 0.3s ease;
   border-radius: 3px;
@@ -118,22 +121,22 @@ button:focus-visible {
 
 
 
-
-/* Login form */
 body {
   background-color: hsl(0, 0%, 56%);
 }
 
-/* allows form to change its width */
-#root {
-  width: 100vw;
-}
 
-
-/* flex input and the img */
-#UserPW {
-  display: flex;
-  flex-direction: column;
+/* Login form */
+/* controls the whole Login */
+.whole-login-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background-color: #11111150;
+  width: 100%;
+  height: 100%;
 }
 
 /* controls the whole Login Card */
@@ -143,16 +146,34 @@ body {
   align-items: center;
   gap: 10px;
   max-width: 1000px;
-  margin: 50px auto;
+  margin: 20vh auto;
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 250px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 35px;
+  box-shadow: 0 0 30vw 1vw rgb(0, 0, 0);
   background-color: #AEAEAE;
 }
-.login-form img {
+.whole-login-form .login-form img {
   /* you can change the color inside the logo */
+  /* animation: background-pan 10s linear infinite;
+  background: radial-gradient(#fff, rgb(255, 128, 103), rgb(228,235,141), rgb(173, 238,181), rgb(68, 139, 224), #fff); */
   background-color: #fff;
   border-radius: 20px;
+}
+/* @keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  
+  to {
+    background-position: 0% center;
+  }
+} */
+
+
+/* flex input and the img */
+#UserPW {
+  display: flex;
+  flex-direction: column;
 }
 
 /* "Username:" and "Password:" */
@@ -206,8 +227,17 @@ body {
 
 
 /* Home Page */
+#home-page {
+  width: 100%;
+}
+
 #home-hero {
   position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: -200px;
 }
 
 #idk-RENAMEME {
@@ -300,7 +330,7 @@ body {
 /* Hoodie_WalkIn.jsx */
 /* global styling for specific clothing pages */
 .hero {
-  width: 100vw;
+  width: 100%;
   background-color: #000;
 }
 .spec-item-page .hero img {
