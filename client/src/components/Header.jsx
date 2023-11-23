@@ -18,6 +18,17 @@ function Header() {
         <img src={fabic} alt="Logo" id='logo-pic' />
         < Link to='/jewelry'> Shop </Link>
         <a href='#'>About</a>
+        <a>
+          <label>
+            <select>
+              <option>
+                <Link to='/jewelry'>JEWELRY</Link>
+              </option>
+              <option>HOODIES</option>
+              <option>CAPS</option>
+            </select>
+          </label>
+        </a>
       </div>
 
       <h1>FabicCode</h1>
