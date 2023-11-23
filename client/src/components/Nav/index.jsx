@@ -5,7 +5,25 @@ function NavBar() {
 
     function ShowNav() {
         if (Auth.loggedIn()) {
-            return 
+            return (
+                <ul>
+                    <li>
+                        <Link to="/Hoodies">
+                            Hoodies
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/Hoodie_Walkin">
+                            Hoodies Walkin
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/Jewelry">
+                            Jewelry
+                        </Link>
+                    </li>
+                </ul>
+            )
         }
     }
 }
