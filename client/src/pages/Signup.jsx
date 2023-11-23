@@ -1,4 +1,4 @@
-import react, { useState } from 'react';
+import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 //user input stored for account login
@@ -9,6 +9,7 @@ lastname: '',
 email: '',
 password: '',
 });
+
 const [addUser, {loading, error, data}]= useMutation(ADD_USER);
 const handleSignup = async (e) => {
 e.preventDefault();
@@ -18,6 +19,7 @@ variables: {
 ...userInfo,
 },
 });
+
 //Successful Reg & Error with Reg
 console.log('Success', data);
 } catch (error) {
@@ -25,6 +27,7 @@ console.error('Failed', error);
 }
 }
 };
+
 //Sign up Form
 const handleInputChange = (e) => {
 const {name, value} = e.target;
@@ -32,10 +35,11 @@ setUserInfo((prevUserInfo) => ({
 prevUserInfo, [name]: value,
 })); 
 };
+
 return (
 <div>
 <h2>Register</h2>
-<form onSubmit={hadnleSignup}>
+<form onSubmit={handleSignup}>
 <label>
 First Name:
 <input type="text" name="firstName" value={userInfo.firstName} onChange={handleInputChange} />    
