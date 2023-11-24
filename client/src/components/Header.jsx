@@ -14,24 +14,25 @@ function Header() {
 
   return (
     <div id='whole-header'>
+      <h1>FabicCode</h1>
       <div class="flex-for-header">
         <img src={fabic} alt="Logo" id='logo-pic' />
-        < Link to='/jewelry'> Shop </Link>
+        <Link to='/jewelry'> Shop </Link>
         <a href='#'>About</a>
         <a>
           <label>
             <select>
               <option>
-                <Link to='/jewelry'>JEWELRY</Link>
+                <Link to='/jewelry'>Shop</Link>
               </option>
-              <option>HOODIES</option>
-              <option>CAPS</option>
+              <option>Hoodies</option>
+              <option>Shirts</option>
+              <option>Sweats</option>
+              <option>Jewelry</option>
             </select>
           </label>
         </a>
       </div>
-
-      <h1>FabicCode</h1>
 
       <div class="flex-for-header">
         <Link onClick={toggleLoginVisibility}>Login</Link>
