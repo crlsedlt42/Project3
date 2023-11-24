@@ -2,6 +2,8 @@ import { useState } from 'react'
 import './App.css'
 import './index.css'
 
+import { BrowserRouter, Routes, Route  } from 'react-router-dom';
+
 import LoginForm from './pages/LogIn';
 import Header from './components/Header';
 import HomePage from './pages/HomePage';
@@ -15,11 +17,8 @@ function App() {
     <div className="App">
       <Header />
       <HomePage />
-      <Header />
       <Jewelry />
-      <Header />
       <Hoodies />
-      <Header />
       <WalkInPage />
     </div>
   );
