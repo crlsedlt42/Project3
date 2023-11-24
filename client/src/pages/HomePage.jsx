@@ -5,7 +5,7 @@ function HomePage() {
   return (
     <div id='home-page'>
       <section id="home-hero">
-        <img src="https://via.placeholder.com/1920x600" alt="placeholder" />
+        <img src="https://via.placeholder.com/1900x600" alt="placeholder" />
         <div id="idk-RENAMEME">
           <h1>Inspirational text here</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, dolorum. Laudantium magni amet incidunt culpa necessitatibus, earum eaque laboriosam doloribus?</p>

@@ -13,7 +13,6 @@ import WalkInPage from './pages/Hoodie_WalkIn';
 function App() {
   return (
     <div className="App">
-      <LoginForm />
       <Header />
       <HomePage />
       <Header />
