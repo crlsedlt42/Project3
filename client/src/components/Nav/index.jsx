@@ -22,8 +22,45 @@ function NavBar() {
                             Jewelry
                         </Link>
                     </li>
+                    <li>
+                    <a href="/" onClick={() => Auth.logout()}>
+                        Logout
+                    </a>
+
+                    </li>
                 </ul>
-            )
+            );
+        } else {
+            return (
+                <ul>
+                    <li>
+                        <Link to="/Signup">
+                            Signup
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="LogIn">
+                            Login
+                        </Link>
+                    </li>
+                </ul>
+            );
         }
     }
+
+    return (
+        <header>
+            <h1>
+                <Link to="/">
+                    FabicCode
+                </Link>
+            </h1>
+
+            <nav>
+                {ShowNav()}
+            </nav>
+        </header>
+    );
 }
+
+export default NavBar;
