@@ -319,7 +319,16 @@ button:focus-visible {
 }
 
 
+#video-animation-page video {
+  overflow-x: hidden;
+  padding: 0 340px;
+  background-color: #000;
+}
 
+
+::-webkit-scrollbar {
+  display: none;
+}
 
 
 /* global styling for prodiuct display */
@@ -344,7 +353,8 @@ button:focus-visible {
 
 .card img {
   width: 350px;
-  background-size: cover;
+  height: 350px;
+  object-fit: cover;
   border-radius: 10px;
   background-color: #bebebe;
 }
