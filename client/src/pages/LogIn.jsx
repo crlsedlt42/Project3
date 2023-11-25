@@ -64,8 +64,21 @@
 
 import React, { useState } from 'react';
 import fabic from '../assets/FabicCodeLogo500px.png';
+// import HomePage from './HomePage';
 
 function LoginForm() {
+  // if they click out of the login-form, then I want the whole thing to display none.
+
+  // const [isVisible, setIsVisible] = useState(true);
+  // const handleClick = () => {
+  //   setIsVisible(!isVisible);
+  // }
+  // if (!isVisible) {
+  //   return <HomePage />;
+  // }
+
+
+  const [email, setEmail] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [showSignup, setShowSignup] = useState(false); // New state variable
@@ -73,23 +86,31 @@ function LoginForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log('Login with:', username, password);
+    
   };
 
   const toggleSignup = () => {
-    setShowSignup(!showSignup); // Toggle the state when the "Sign Up" span is clicked
+    setShowSignup(!showSignup); // Toggle state when the "Sign Up" span is clicked
+    // 
+    // if toggle signup is true, then have the bottom text say "Already have an account? Log in."
+    // also need to log a different console log / target if theyre signing up or signing in.
+    // 
+
+
   };
 
   return (
+    // added "onClick={handleClick}" V in the div
     <div className="whole-login-form">
       <form onSubmit={handleSubmit} className='login-form'>
         <section id="UserPW">
           {showSignup && ( // Conditional rendering based on showSignup state
-            <div id='display-signup'>
+            <div>
               <label>Email:</label>
               <input
                 type="text"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
           )}
@@ -117,6 +138,7 @@ function LoginForm() {
         </section>
         <img src={fabic} alt="Logo" />
       </form>
+      {/* {isVisible && <HomePage />} */}
     </div>
   );
 }

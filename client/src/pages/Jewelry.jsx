@@ -10,7 +10,6 @@ import skullNsnakeP from '../assets/jewelry/pendant-skull-and-snake.png';
 import treeP from '../assets/jewelry/pendant-tree.png';
 // importing rings
 import butterfly1R from '../assets/jewelry/ring-gold-and-silver-butterfly1.png';
-import butterfly2R from '../assets/jewelry/ring-gold-and-silver-butterfly2.png';
 import butterfly3R from '../assets/jewelry/ring-gold-and-silver-butterfly3.png';
 import birdR from '../assets/jewelry/ring-gold-bird.png';
 import goldSolidR from '../assets/jewelry/ring-gold-solid.png';
@@ -79,12 +78,6 @@ function Jewelry() {
         <div className="card">
           <p>*$$$*</p>
           <img src={butterfly1R} alt="jewelry PLACEHOLDER" />
-          <p>*TITLE*</p>
-          <p>*RATING*</p>
-        </div>
-        <div className="card">
-          <p>*$$$*</p>
-          <img src={butterfly2R} alt="jewelry PLACEHOLDER" />
           <p>*TITLE*</p>
           <p>*RATING*</p>
         </div>
