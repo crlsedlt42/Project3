@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import './index.css';
@@ -6,11 +5,11 @@ import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import HomePage from './pages/HomePage';
-import LogIn from './pages/LogIn.jsx';
+import Login from './pages/LogIn';
 import Jewelry from './pages/Jewelry';
-import Hoodies from './pages/Hoodies.jsx';
-import Hoodie_Walkin from './pages/Hoodie_WalkIn.jsx';
-// import Signup from './pages/Signup.jsx';
+import Hoodies from './pages/Hoodies';
+import Hoodie_Walkin from './pages/Hoodie_WalkIn';
+import Signup from './pages/Signup';
 
 const BrowserRouter = createBrowserRouter([
   {
@@ -23,12 +22,12 @@ const BrowserRouter = createBrowserRouter([
       },
       {
         path: '/login',
-        element: <LogIn />,
+        element: <Login />,
       },
-      // {
-      //   path: '/Signup',
-      //   element: <Signup />,
-      // },
+      {
+        path: '/Signup',
+        element: <Signup />,
+      },
       {
         path: '/jewelry',
         element: <Jewelry />,
@@ -41,15 +40,11 @@ const BrowserRouter = createBrowserRouter([
         path: '/Hoodie_Walkin',
         element: <Hoodie_Walkin />,
       },
-    ]
-  }
-])
+    ],
+  },
+]);
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-      <RouterProvider router={BrowserRouter}>
-        <App />
-      </RouterProvider>
-  </React.StrictMode>,
-)
+      <RouterProvider router={BrowserRouter} />
+);
