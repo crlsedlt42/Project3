@@ -68,12 +68,14 @@ import Hoodies from './pages/Hoodies';
 import WalkInPage from './pages/Hoodie_WalkIn';
 import Shirts from './pages/Shirts';
 import RememberMePage from './pages/Shirt_RememberMe';
+import NavBar from './components/Nav/NavBar';
 
 
 function App() {
   return (
     <div className="App">
       {/* <LoginForm /> */}
+      < NavBar />
       <HomePage />
       <ScrollAnimation src="/assets/scrollFrames/HoodieWebDevProj3.mp4" />
       <Jewelry />
