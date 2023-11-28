@@ -1,34 +1,39 @@
 import Auth from '../../utils/auth';
 import { Link } from "react-router-dom";
+import fabic from '../../assets/FabicCodeLogoWhite500px.png';
 
 function NavBar() {
 
     function ShowNav() {
+        console.log(Auth.loggedIn());
         if (Auth.loggedIn()) {
             return (
-                <ul>
+                <div>
+                    <div>
+                        <img src={fabic} alt="Logo" id='logo-pic' />
+                        <Link to="/jewelry">Jewelery</Link>
+                        <a>
+                            <label>
+                                <select>
+                                    <option>
+                                        <Link to="/Hoodies">Hoodies</Link>
+                                    </option>
+                                    <option>
+                                        <Link to="/jewelry">Jewelery</Link>
+                                    </option>
+                                    <option>
+                                        <Link to="/Hoodie_WalkIn">Hoodie Walkin</Link>
+                                    </option>
+                                </select>
+                            </label>
+                        </a>
+                    </div>
                     <li>
-                        <Link to="/Hoodies">
-                            Hoodies
-                        </Link>
+                        <a href="/" onClick={() => Auth.logout()}>
+                            Logout
+                        </a>
                     </li>
-                    <li>
-                        <Link to="/Hoodie_Walkin">
-                            Hoodies Walkin
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/Jewelry">
-                            Jewelry
-                        </Link>
-                    </li>
-                    <li>
-                    <a href="/" onClick={() => Auth.logout()}>
-                        Logout
-                    </a>
-
-                    </li>
-                </ul>
+                </div>
             );
         } else {
             return (
@@ -39,7 +44,7 @@ function NavBar() {
                         </Link>
                     </li>
                     <li>
-                        <Link to="LogIn">
+                        <Link to="/login">
                             Login
                         </Link>
                     </li>

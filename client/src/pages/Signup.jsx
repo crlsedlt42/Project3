@@ -1,89 +1,85 @@
-import { useState } from "react";
-import { useMutation } from "@apollo/client";
-import { ADD_USER } from "../utils/mutations";
-//user input stored for account login
-const Signup = () => {
-  const [userInfo, setUserinfo] = useState({
-    firstName: "",
-    lastname: "",
-    email: "",
-    password: "",
-  });
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useMutation } from '@apollo/client';
+import Auth from '../utils/auth';
+import { ADD_USER } from '../utils/mutations';
 
-  const [addUser, { loading, error, data }] = useMutation(ADD_USER);
-  const handleSignup = async (e) => {
-    e.preventDefault();
-    try {
-      const { data } = await addUser({
-        variables: {
-          ...userInfo,
-        },
-      });
+function Signup(props) {
+  const [formState, setformState] = useState({  firstName: '', lastName: '', email: '', password: '' });
+  const [addUser] = useMutation(ADD_USER);
 
-      //Successful Reg & Error with Reg
-      console.log("Success", data);
-    } catch (error) {
-      console.error("Failed", error);
-    }
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    console.log(formState);
+    const mutationResponse = await addUser({
+      variables: {
+        email: formState.email,
+        password: formState.password,
+        firstName: formState.firstName,
+        lastName: formState.lastName,
+      },
+    });
+    const token = mutationResponse.data.addUser.token;
+    Auth.login(token);
   };
-};
 
-//Sign up Form
-const handleInputChange = (e) => {
-  const { name, value } = e.target;
-  setUserInfo((prevUserInfo) => ({
-    prevUserInfo,
-    [name]: value,
-  }));
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setformState({
+      ...formState,
+      [name]: value,
+    });
+  };
+
   return (
     <div>
-      <h2>Register</h2>
-      <form onSubmit={handleSignup}>
-        <label>
-          First Name:
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="firstName">FirstName:</label>
           <input
-            type="text"
-            name="firstName"
-            value={userInfo.firstName}
-            onChange={handleInputChange}
+            placeholder='First'
+            type="firstName"
+            id='firstName'
+            name='firstName'
+            onChange={handleChange}
           />
-        </label>
-        <br />
-        <label>
-          Last Name:
+        </div>
+        <div>
+          <label htmlFor="lastName">LastName:</label>
           <input
-            type="text"
-            name="lastName"
-            value={userInfo.lastName}
-            onChange={handleInputChange}
+            placeholder='Last'
+            name='lastName'
+            type="lastName"
+            id='lastName'
+            onChange={handleChange}
           />
-        </label>
-        <br />
-        <label>
-          Email:
-          <input
-            type="email"
-            name="email"
-            value={userInfo.email}
-            onChange={handleInputChange}
-          />
-        </label>
-        <br />
-        Password:
-        <label>
-          <input
-            type="password"
-            name="password"
-            value={userInfo.password}
-            onChange={handleInputChange}
-          />
-        </label>
-        <br />
-        <button type="submit">Confirm</button>
+          <div>
+            <label htmlFor="email">Email:</label>
+            <input
+              placeholder='example@example.com'
+              name='email'
+              type="text"
+              id='email'
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <label htmlFor="password">Password:</label>
+            <input
+            placeholder='your password here'
+              type="password"
+              name="password"
+              id="pwd"
+              onChange={handleChange}
+               />
+          </div>
+          <div>
+            <button type='submit'>Submit</button>
+          </div>
+        </div>
       </form>
     </div>
   );
-};
+}
 
-//Allows signup component in other files
 export default Signup;

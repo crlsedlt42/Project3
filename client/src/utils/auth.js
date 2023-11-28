@@ -13,7 +13,7 @@ class AuthService {
     isTokenExpired(token) {
         try {
             const decoded = decode(token);
-            if (decode.exp < Date.now() / 1000) {
+            if (decoded.exp < Date.now() / 1000) {
                 return true;
             } else return false;
         } catch (err) {
@@ -26,7 +26,7 @@ class AuthService {
     }
 
     login(idToken) {
-        localStorage.setItem('Id_token', idToken);
+        localStorage.setItem('id_token', idToken);
 
         window.location.assign('/');
     }
