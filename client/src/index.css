@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif
 }
 
 :root {
@@ -100,11 +101,16 @@ button:focus-visible {
   width: 100%;
   z-index: 10;
 }
-#whole-header h1 {
+#whole-header-h1 {
   position: absolute;
   top: 52px;
   left: 50%;
   transform: translate(-50%, -50%);
+  /* styling */
+  color: #FFF;
+  font-size: 2.5em;
+  font-weight: 900;
+  text-decoration: none;
 }
 
 #logo-pic {
@@ -115,6 +121,8 @@ button:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  list-style-type: none;
 }
 
 .flex-for-header a, label {
@@ -139,23 +147,11 @@ button:focus-visible {
 
 /* Login form */
 /* controls the whole Login */
-.whole-login-form {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  background-color: #11111150;
-  width: 100%;
-  height: 100%;
-}
-
-/* controls the whole Login Card */
 .login-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 10px;
+  gap: 25px;
   max-width: 1000px;
   margin: 20vh auto;
   padding: 20px;
@@ -163,35 +159,19 @@ button:focus-visible {
   box-shadow: 0 0 30vw 1vw rgb(0, 0, 0);
   background-color: #AEAEAE;
 }
-.whole-login-form .login-form img {
-  /* you can change the color inside the logo */
-  /* animation: background-pan 10s linear infinite;
-  background: radial-gradient(#fff, rgb(255, 128, 103), rgb(228,235,141), rgb(173, 238,181), rgb(68, 139, 224), #fff); */
+.login-form img {
   background-color: #fff;
   border-radius: 20px;
-}
-/* @keyframes background-pan {
-  from {
-    background-position: 0% center;
-  }
-  
-  to {
-    background-position: 0% center;
-  }
-} */
-
-
-/* flex input and the img */
-#UserPW {
-  display: flex;
-  flex-direction: column;
+  height: 100%;
+  width: auto;
 }
 
-/* "Username:" and "Password:" */
-.login-form label {
+
+.signup-form label {
+  cursor: default;
   text-align: left;
   display: block;
-  margin-bottom: 5px;
+  margin: 10px 0 0;
   font-weight: bold;
 }
 
@@ -200,14 +180,15 @@ button:focus-visible {
 .login-form input[type="password"] {
   width: 100%;
   padding: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   border: 1px solid #ddd;
   border-radius: 4px;
   box-sizing: border-box;
 }
 
-/* Login btn */
+/* login btn */
 .login-form button {
+  margin: 20px 0 0;
   width: 100%;
   padding: 10px;
   border: none;
@@ -222,81 +203,93 @@ button:focus-visible {
   background-color: hsl(211, 100%, 43%);
 }
 
-#SU-text {
+#LI-text {
   color: #696969;
 }
-
-/* Sign Up Page CSS*/
-#sign-up {
+#log-in {
   color: #007bff;
   cursor: pointer;
   text-decoration: underline;
 }
+/* End of login form */
 
-.container {
-  display: flex;
-  flex-direction: column;
+
+
+
+
+/* Sign Up */
+/* controls the whole signup Card */
+.signup-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-content: center;
+  gap: 25px;
+  max-width: 1000px;
   margin: 20vh auto;
   padding: 20px;
   border-radius: 35px;
   box-shadow: 0 0 30vw 1vw rgb(0, 0, 0);
   background-color: #AEAEAE;
-  width: 25%;
+}
+.signup-form img {
+  background-color: #fff;
+  border-radius: 20px;
+  height: 100%;
+  width: auto;
 }
 
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-  margin-top: 10px;
-  font-size: 2em;
+
+.signup-form label {
+  cursor: default;
+  text-align: left;
+  display: block;
+  margin: 10px 0 0;
   font-weight: bold;
-  margin-bottom: 20px;
 }
 
-.submitbtn {
-  display: flex;
-  justify-content: center;
+/* input fields */
+.signup-form input[type="firstName"],
+.signup-form input[type="lastName"],
+.signup-form input[type="text"],
+.signup-form input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* signup btn */
+.signup-form button {
+  margin: 20px 0 0;
   width: 100%;
   padding: 10px;
   border: none;
   border-radius: 4px;
+  background-color: hsl(211, 100%, 50%);
   color: white;
   font-size: 16px;
   cursor: pointer;
   transition: 0.3s ease;
 }
-
-.inputs {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-  margin-bottom: 20px;
-  text-align: left;
+.signup-form button:hover {
+  background-color: hsl(211, 100%, 43%);
 }
 
-.inputs label {
-  text-align: center;
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+#LI-text {
+  color: #696969;
 }
+#log-in {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+/* End of signup form */
 
-.inputs input {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-/* End of login form */
+
+
+
 
 
 
@@ -430,7 +423,7 @@ button:focus-visible {
 }
 
 .card {
-  background-color: #5e5353;
+  background-color: rgb(82, 95, 91);
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;

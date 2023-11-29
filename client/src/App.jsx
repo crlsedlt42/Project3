@@ -34,7 +34,7 @@ function App() {
     <ApolloProvider client={client}>
       <div>
         <StoreProvider>
-          <NavBar />
+          {/* <NavBar /> */}
           <Outlet />
         </StoreProvider>
       </div>
@@ -56,8 +56,9 @@ export default App;
 
 
 
-// import { useState } from 'react'
-// import './App.css'
+
+
+
 // import './index.css'
 
 // import LoginForm from './pages/LogIn';
@@ -68,7 +69,7 @@ export default App;
 // import WalkInPage from './pages/Hoodie_WalkIn';
 // import Shirts from './pages/Shirts';
 // import RememberMePage from './pages/Shirt_RememberMe';
-// import NavBar from './components/Nav/NavBar';
+// import NavBar from './components/Nav';
 
 
 // function App() {
