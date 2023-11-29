@@ -11,22 +11,19 @@ function NavBar() {
                 <div>
                     <div>
                         <img src={fabic} alt="Logo" id='logo-pic' />
-                        <Link to="/jewelry">Jewelery</Link>
-                        <a>
-                            <label>
-                                <select>
-                                    <option>
-                                        <Link to="/Hoodies">Hoodies</Link>
-                                    </option>
-                                    <option>
-                                        <Link to="/jewelry">Jewelery</Link>
-                                    </option>
-                                    <option>
-                                        <Link to="/Hoodie_WalkIn">Hoodie Walkin</Link>
-                                    </option>
-                                </select>
-                            </label>
-                        </a>
+                        <ul>
+                            <li>
+                                <Link to="/about">
+                                    About
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/orderHistory">
+                                    Order History
+                                </Link>
+                            </li>
+                        </ul>
+                        
                     </div>
                     <li>
                         <a href="/" onClick={() => Auth.logout()}>
