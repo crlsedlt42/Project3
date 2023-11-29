@@ -1,6 +1,8 @@
 import React from 'react';
 import hero from '../assets/heroImg.png';
-
+// import ProductList from "../components/ProductList";
+import Cart from "../components/Cart";
+import CategoryMenu from "../components/CategoryMenu";
 
 function HomePage() {
   return (
@@ -13,30 +15,9 @@ function HomePage() {
           <p>But it's good to know that this site does not legitimately sell anything. This site has been made for learning purposes only; but please, use this site and admire the beauty of "our clothing" and do not enter your real credit card info upon checkout.</p>
         </div>
       </section>
-      <section id="clothing">
-        <h2>Clothing</h2>
-        <div id='clothing-small-display'>
-          {/* I want to link all of these to their seperate page */}
-          <div className='small-display'>
-            <img src="https://via.placeholder.com/476x100" alt="placeholder" />
-            <h3>Hoodies</h3>
-          </div>
-          <div className='small-display'>
-            <img src="https://via.placeholder.com/476x100" alt="placeholder" />
-            <h3>Shirts</h3>
-          </div>
-          <div className='small-display'>
-            <img src="https://via.placeholder.com/476x100" alt="placeholder" />
-            <h3>Sweats</h3>
-          </div>
-          <div className='small-display'>
-            <img src="https://via.placeholder.com/476x100" alt="placeholder" />
-            <h3>Jewlery</h3>
-          </div>
-        </div>
-      </section>
+      
     </div>
-  )
-}
+  );
+};
 
 export default HomePage;
