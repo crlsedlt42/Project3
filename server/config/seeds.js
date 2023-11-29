@@ -1,5 +1,5 @@
 const db = require('./db');
-const { User, Product, Category } = require('../models');
+const { Product, Category } = require('../models');
 const cleanDB = require('./cleanDB');
 
 db.once('open', async () => {
@@ -8,15 +8,136 @@ db.once('open', async () => {
     await cleanDB('Category', 'categories');
 
     const categories = await Category.insertMany([
-        { name: 'Shirts' },
-        { name: 'Pants' },
-        { name: 'Shoes' },
+        { name: 'Jewelery' },
+        { name: 'Hoodies' },
+        { name: 'T-Shirts' },
         { name: 'Hats' }
     ]);
 
     console.log('categories seeded');
 
-    const products = await Product.insertMany([
+    await Product.insertMany([
+        {
+            name: 'Jaguar Pendant',
+            description:
+                'A silver jaguar pendant on a silver chain',
+            category: categories[0]._id,
+            price: 99.99,
+            quantity: 10
+        },
+        {
+            name: 'Death Eater Pendant',
+            description:
+                'A silver pendant with the Dark Mark on it',
+            category: categories[0]._id,
+            price: 149.99,
+            quantity: 10
+        },
+        {
+            name: 'Infinity Circle Pendant',
+            description: 'A silver pendant with an intregate circle design',
+            category: categories[0]._id,
+            price: 100.00,
+            quantity: 50
+        },
+        {
+            name: 'Silver Eagle Pendant',
+            description: 'A silver pendant with a fierce eagle design',
+            category: categories[0]._id,
+            price: 150.00,
+            quantity: 50
+        },
+        {
+            name: 'Rose Gold Tree of Life Pendant',
+            description: 'A rose gold pendant with a tree of life design',
+            category: categories[0]._id,
+            price: 200.00,
+            quantity: 50
+        },
+        {
+            name: 'SilverBack Gorilla Pendant',
+            description: 'A silver pendant with a JACKED gorilla design',
+            category: categories[0]._id,
+            price: 150.00,
+            quantity: 50
+        },
+        {
+            name: 'Silver Ape Pendant',
+            description: 'A silver pendant with a JACKED ape design',
+            category: categories[0]._id,
+            price: 120.00,
+            quantity: 50
+        },
+        {
+            name: 'Turbulent Silver Pendant',
+            description: 'A silver pendant with a turbulent flow design',
+            category: categories[0]._id,
+            price: 150.00,
+            quantity: 50
+        },
+        {
+            name: 'Rose Gold Butterfly Ring',
+            description: 'A rose gold ring with a butterfly design',
+            category: categories[0]._id,
+            price: 100.00,
+            quantity: 50
+        },
+        {
+            name: 'Black and Gold Butterfly Ring',
+            description: 'A black and gold ring with a butterfly design',
+            category: categories[0]._id,
+            price: 200.00,
+            quantity: 50
+        },
+        {
+            name: 'Gold Dove Ring',
+            description: 'A gold ring with a dove design',
+            category: categories[0]._id,
+            price: 175.00,
+            quantity: 50
+        },
+        {
+            name: 'Gold Heritance Ring',
+            description: 'A gold ring for men',
+            category: categories[0]._id,
+            price: 200.00,
+            quantity: 50
+        },
+        {
+            name: 'Rose Gold Tree of Life Ring',
+            description: 'A rose gold ring with a tree of life design',
+            category: categories[0]._id,
+            price: 210.00,
+            quantity: 50
+        },
+        {
+            name: 'Silver Gothic Ring',
+            description: 'A silver ring with a gothic design',
+            category: categories[0]._id,
+            price: 110.00,
+            quantity: 50
+        },
+        {
+            name: 'Silver Eyes of the Multiverse Ring',
+            description: 'A silver ring with multiple eyes as the main design concept',
+            category: categories[0]._id,
+            price: 150.00,
+            quantity: 50
+        },
+        {
+            name: 'Silver Cubic Ring',
+            description: 'A silver ring with a cubic design',
+            category: categories[0]._id,
+            price: 110.00,
+            quantity: 50
+        },
+        {
+            name: 'Black Walkin Hoodie',
+            description: `A black hoodie with our famous Walkin' design`,
+            category: categories[0]._id,
+            price: 75.00,
+            quantity: 50
+        },
         {
             name: 'Plain T-Shirt',
             description:
@@ -26,10 +147,10 @@ db.once('open', async () => {
             quantity: 100
         },
         {
-            name: 'Cargo Pants',
+            name: 'Remember Me T-Shirt',
             description:
-                'Pants that you can use to carry more than just your legs',
-            category: categories[1]._id,
+                'An unforgettable t-shirt you will remember forever',
+            category: categories[2]._id,
             price: 29.99,
             quantity: 50
         },
@@ -42,10 +163,10 @@ db.once('open', async () => {
             quantity: 20
         },
         {
-            name: 'Running Sneakers',
+            name: 'Mitchell & Ness Hat',
             description:
-                'Protective, durable, and fashionable sneakers for running',
-            category: categories[2]._id,
+                'Stylish hat of your favorite sports team, with a 90s retro look',
+            category: categories[3]._id,
             price: 79.99,
             quantity: 0
         },
@@ -53,28 +174,14 @@ db.once('open', async () => {
 
     console.log('products seeded');
 
-    await User.create({
-        firstName: 'George',
-        lastName: 'Washington',
-        email: 'georgewashington@email.com',
-        password: 'password12345',
-        orders: [
-            {
-                products: [products[0]._id, products[1]._id]
-            }
-        
-        ]
-    });
-
-    await User.create({
-        firstName: 'Elon',
-        lastName: 'Musk',
-        email: 'ElonMuskX@telsa.com',
-    });
-
-
-console.log('users seeded');
-
 process.exit();
 
 });
+
+// {
+//     name: '',
+//     description: '',
+//     category: categories[0]._id,
+//     price: 0,
+//     quantity: 50
+// },
