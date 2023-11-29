@@ -18,11 +18,11 @@ The goal as a team was to contribute to this project by using our individual str
 
 ## Contributors
 
-[Adrian Estrella](https://github.com/aestrella0140)
-[Amanda Franklin](https://github.com/franklinamanda34)
-[Josh Hill](https://github.com/JoshHill1)
-[Rylie Reed](https://github.com/rlreed13)
-[Carlos DLT](https://github.com/crlsedlt42)
+- [Adrian Estrella](https://github.com/aestrella0140)
+- [Amanda Franklin](https://github.com/franklinamanda34)
+- [Josh Hill](https://github.com/JoshHill1)
+- [Rylie Reed](https://github.com/rlreed13)
+- [Carlos DLT](https://github.com/crlsedlt42)
 
 ## Usage
 
@@ -37,4 +37,3 @@ The goal as a team was to contribute to this project by using our individual str
 Best way to contribute will be to comment on the code to suggest how this application can be improved and collaborate to create a seemless app to improve upon.
 
 ## Future Development
-
