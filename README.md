@@ -37,5 +37,3 @@ The goal as a team was to contribute to this project by using our individual str
 Best way to contribute will be to comment on the code to suggest how this application can be improved and collaborate to create a seemless app to improve upon.
 
 ## Future Development
-
-TESTING BRANCH
