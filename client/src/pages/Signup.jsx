@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
+import AttributeAttire from '../assets/FabicCodeLogo500px.png'
 
 function Signup(props) {
   const [formState, setformState] = useState({  firstName: '', lastName: '', email: '', password: '' });
@@ -33,9 +34,9 @@ function Signup(props) {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className='signup-form'>
         <div>
-          <label htmlFor="firstName">FirstName:</label>
+          <label htmlFor="firstName">First Name:</label>
           <input
             placeholder='First'
             type="firstName"
@@ -43,9 +44,7 @@ function Signup(props) {
             name='firstName'
             onChange={handleChange}
           />
-        </div>
-        <div>
-          <label htmlFor="lastName">LastName:</label>
+          <label htmlFor="lastName">Last Name:</label>
           <input
             placeholder='Last'
             name='lastName'
@@ -76,7 +75,9 @@ function Signup(props) {
           <div>
             <button type='submit'>Submit</button>
           </div>
+          <p id='LI-text'>Already have an account? <Link to="/login" id='log-in'>Login</Link></p>
         </div>
+        <img src={AttributeAttire} alt="New brand name. same logo" />
       </form>
     </div>
   );
