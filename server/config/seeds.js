@@ -168,7 +168,7 @@ db.once('open', async () => {
                 'Stylish hat of your favorite sports team, with a 90s retro look',
             category: categories[3]._id,
             price: 79.99,
-            quantity: 0
+            quantity: 50
         },
     ]);
 
