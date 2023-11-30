@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { pluralize } from "../../utils/helpers"
 import { useStoreContext } from "../../utils/GlobalState";
-import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
+import { ADD_TO_CART, UPDATE_CART_QUANATITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 
 function ProductItem(item) {
@@ -21,7 +21,7 @@ function ProductItem(item) {
     const itemInCart = cart.find((cartItem) => cartItem._id === _id)
     if (itemInCart) {
       dispatch({
-        type: UPDATE_CART_QUANTITY,
+        type: UPDATE_CART_QUANATITY,
         _id: _id,
         purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
       });

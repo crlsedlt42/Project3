@@ -55,7 +55,7 @@ const resolvers = {
             const url = new URL(context.headers.referer).origin;
             await Order.create({ products: args.products.map(({ _id }) => _id) });
             const line_items = [];
-
+                console.log(args.products)
             for (const product of args.products) {
                 line_items.push({
                     price_data: {
@@ -67,7 +67,7 @@ const resolvers = {
                         },
                         unit_amount: product.price * 100,
                     },
-                    quantity: product.purshaseDate,
+                    quantity: product.purchaseQuantity,
                 });
             }
 

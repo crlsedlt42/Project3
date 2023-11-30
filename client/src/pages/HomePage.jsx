@@ -1,6 +1,6 @@
 import React from 'react';
 import hero from '../assets/heroImg.png';
-// import ProductList from "../components/ProductList";
+import ProductList from "../components/ProductList";
 import Cart from "../components/Cart";
 import CategoryMenu from "../components/CategoryMenu";
 
@@ -15,7 +15,12 @@ function HomePage() {
           <p>But it's good to know that this site does not legitimately sell anything. This site has been made for learning purposes only; but please, use this site and admire the beauty of "our clothing" and do not enter your real credit card info upon checkout.</p>
         </div>
       </section>
-      
+      <div>
+      <CategoryMenu />
+      <ProductList />
+      <Cart />
+
+      </div>
     </div>
   );
 };
