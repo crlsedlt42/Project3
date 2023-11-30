@@ -34,7 +34,7 @@ function App() {
     <ApolloProvider client={client}>
       <div>
         <StoreProvider>
-          <NavBar />
+           <NavBar /> 
           <Outlet />
         </StoreProvider>
       </div>
@@ -43,4 +43,3 @@ function App() {
 }
 
 export default App;
-
