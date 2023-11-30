@@ -6,6 +6,7 @@ import { idbPromise } from '../../utils/helpers';
 import Auth from '../../utils/auth';
 import { useStoreContext } from '../../utils/GlobalState';
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from "../../utils/actions";
+import CartItem from '../CartItem';
 // need to import style.css need to make also
 
 
@@ -40,7 +41,7 @@ const Cart = () => {
 
     function calculateTotal() {
         let sum = 0;
-        state.cart.foreach((item) => {
+        state.cart.forEach((item) => {
             sum += item.price * item.purchaseQuantity;
         });
         return sum.toFixed(2);

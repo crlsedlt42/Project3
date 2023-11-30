@@ -41,7 +41,7 @@ query Query {
 `;
 
 export const QUERY_CATEGORIES = gql`
-query Query {
+ {
     categories {
       _id
       name
@@ -50,7 +50,7 @@ query Query {
 `;
 
 export const QUERY_USER = gql`
-query Query {
+ {
     user {
       firstName
       lastName

@@ -26,7 +26,7 @@ const userSchema = new Schema({
         required: true,
         minLength: 5
     },
-    orders: [Order]
+    orders: [Order.schema]
 });
 
 userSchema.pre('save', async function (next) {
