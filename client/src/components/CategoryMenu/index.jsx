@@ -8,9 +8,9 @@ import { idbPromise } from "../../utils/helpers";
 
 function CategoryMenu() {
     const [state, dispatch] = useStoreContext();
-
-    const { categories } = state;
-
+    console.log(state);
+    // const {categories} = state;
+    const categories = [];
     const { loading, data: categoryData } = useQuery(QUERY_CATEGORIES);
 
     useEffect(() => {
@@ -19,7 +19,7 @@ function CategoryMenu() {
                 type: UPDATE_CATEGORIES,
                 categories: categoryData.categories,
             });
-            categoryData.categories.foreach((category) => {
+            categoryData.categories.forEach((category) => {
                 idbPromise('categories', 'put', category);
             });
         } else if (!loading) {

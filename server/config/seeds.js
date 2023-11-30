@@ -1,4 +1,4 @@
-const db = require('./db');
+const db = require('./connections');
 const { Product, Category } = require('../models');
 const cleanDB = require('./cleanDB');
 
