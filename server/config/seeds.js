@@ -10,8 +10,7 @@ db.once('open', async () => {
     const categories = await Category.insertMany([
         { name: 'Jewelery' },
         { name: 'Hoodies' },
-        { name: 'T-Shirts' },
-        { name: 'Hats' }
+        { name: 'Shirts' },
     ]);
 
     console.log('categories seeded');
@@ -156,37 +155,21 @@ db.once('open', async () => {
             quantity: 50
         },
         {
-            name: 'Plain T-Shirt',
-            description:
-                'No fancy logos or designs, just a plain t-shirt',
-            category: categories[0]._id,
-            image: 'white-shirt-back990.png',
-            price: 9.99,
-            quantity: 100
-        },
-        {
             name: 'Remember Me T-Shirt',
             description:
                 'An unforgettable t-shirt you will remember forever',
             category: categories[2]._id,
             image: 'white-shirt-front-RememberMe990.png',
-            price: 29.99,
+            price: 39.99,
             quantity: 50
         },
         {
-            name: 'Baseball Hat',
+            name: 'Mind Overload Sweatshirt',
             description:
-                'A hat that has a picture of a baseball on it',
-            category: categories[3]._id,
-            price: 19.99,
-            quantity: 20
-        },
-        {
-            name: 'Mitchell & Ness Hat',
-            description:
-                'Stylish hat of your favorite sports team, with a 90s retro look',
-            category: categories[3]._id,
-            price: 79.99,
+                'A black longsleeve sweatshirt with a design inspired by Everything Everywhere All At Once',
+            category: categories[2]._id,
+            image: 'MindOverloadDesignBlackSleeve.png',
+            price: 49.99,
             quantity: 50
         },
     ]);
@@ -196,11 +179,3 @@ db.once('open', async () => {
 process.exit();
 
 });
-
-// {
-//     name: '',
-//     description: '',
-//     category: categories[0]._id,
-//     price: 0,
-//     quantity: 50
-// },
