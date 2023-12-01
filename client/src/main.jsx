@@ -12,6 +12,8 @@ import Hoodie_Walkin from './pages/Hoodie_WalkIn';
 import Signup from './pages/Signup';
 import AboutPage from './pages/about.jsx';
 import ScrollControlledVideo from './pages/ScrollAnimation.jsx';
+import Details from './pages/Detail.jsx';
+
 
 const BrowserRouter = createBrowserRouter([
   {
@@ -46,6 +48,10 @@ const BrowserRouter = createBrowserRouter([
         path: '/about',
         element: <AboutPage />
       },
+      {
+        path: '/products/:id',
+        element: <Details />
+      }
     ],
   },
 ]);
