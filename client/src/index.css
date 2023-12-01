@@ -100,6 +100,7 @@ button:focus-visible {
   position: fixed;
   width: 100%;
   z-index: 10;
+  top: 0px;
 }
 
 /*Second NavBar*/
