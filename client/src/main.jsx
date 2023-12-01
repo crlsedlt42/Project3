@@ -10,6 +10,8 @@ import Jewelry from './pages/Jewelry';
 import Hoodies from './pages/Hoodies';
 import Hoodie_Walkin from './pages/Hoodie_WalkIn';
 import Signup from './pages/Signup';
+import AboutPage from './pages/about.jsx';
+import ScrollControlledVideo from './pages/ScrollAnimation.jsx';
 
 const BrowserRouter = createBrowserRouter([
   {
@@ -39,6 +41,10 @@ const BrowserRouter = createBrowserRouter([
       {
         path: '/Hoodie_Walkin',
         element: <Hoodie_Walkin />,
+      },
+      {
+        path: '/about',
+        element: <AboutPage />
       },
     ],
   },

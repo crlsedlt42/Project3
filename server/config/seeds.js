@@ -150,7 +150,7 @@ db.once('open', async () => {
         {
             name: 'Black Walkin Hoodie',
             description: `A black hoodie with our famous Walkin' design`,
-            category: categories[0]._id,
+            category: categories[1]._id,
             image: 'black-hoodie-back-WalkIn990.png',
             price: 75.00,
             quantity: 50

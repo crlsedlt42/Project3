@@ -9,8 +9,8 @@ import { idbPromise } from "../../utils/helpers";
 function CategoryMenu() {
     const [state, dispatch] = useStoreContext();
     console.log(state);
-    // const {categories} = state;
-    const categories = [];
+    const {categories} = state;
+    
     const { loading, data: categoryData } = useQuery(QUERY_CATEGORIES);
 
     useEffect(() => {
