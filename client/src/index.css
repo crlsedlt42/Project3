@@ -44,7 +44,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: hsl(0, 0%, 56%);
+  background-color: #040404;
 }
 
 h1 {
@@ -411,32 +411,44 @@ button:focus-visible {
 
 /* global styling for prodiuct display */
 
-.product-page {
-  padding: 10px 5%;
+.flex-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 30px 4% 10px;
+  gap: 30px;
 }
 
 .product {
-  padding: 30px 5% 10px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 10px;
-}
-
-.card {
-  background-color: rgb(82, 95, 91);
-  padding: 5px;
+  background-color: rgba(82, 95, 91, 0.3);
+  padding: 5px 5px 10px;
   border-radius: 10px;
-  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px #FFF solid;
+}
+.product a {
+  cursor: default;
+  text-decoration: none;
 }
 
-.card img {
-  width: 350px;
+.product img {
+  width: 400px;
   height: 350px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: #bebebe;
 }
 
+.product-name {
+  color: #FFF;
+}
+
+.product button {
+  background-color: hsl(237, 66%, 55%);
+}
 
 
 
